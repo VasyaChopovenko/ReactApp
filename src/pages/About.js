@@ -36,7 +36,7 @@ class About extends Component {
                                     </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                    <img className="d-block w-100" className="d-block w-100" src="https://jstemplate.net/wp-content/uploads/2021/05/digiency-cover.jpg" alt="picture two"/>
+                                    <img className="d-block w-100" src="https://jstemplate.net/wp-content/uploads/2021/05/digiency-cover.jpg" alt="picture two"/>
                                     <p>
                                         Lorem
                                     </p>
