@@ -8,12 +8,17 @@ import {
     Button
 } from "react-bootstrap";
 import logo from '../logo.svg';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contacts from "./Contacts";
+import Blog from "./Blog";
 
 export default class Header extends Component {
     render() {
         return (
             <>
-                <Navbar fixed='top' collapseOnSelect expand='md' bg='dark' variant='dark'>
+                <Navbar sticky='top' collapseOnSelect expand='md' bg='dark' variant='dark'>
                     <Container>
                         <Navbar.Brand href='/'>
                             <img src={logo}
@@ -37,6 +42,14 @@ export default class Header extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+                <Router>
+                    <Routes>
+                        <Route path='/' element={<Home/>}/>
+                        <Route path='/about' element={<About/>}/>
+                        <Route path='/contacts' element={<Contacts/>}/>
+                        <Route path='/blog' element={<Blog/>}/>
+                    </Routes>
+                </Router>
             </>
         );
     }
