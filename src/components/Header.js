@@ -63,11 +63,11 @@ export default function Header() {
 
     useEffect(() => {
         if (emailError || passwordError) {
-            setFormValid(false)
+            setFormValid(false);
         } else {
-            setFormValid(true)
+            setFormValid(true);
         }
-    }, [emailError, passwordError])
+    }, [emailError, passwordError]);
 
 
     return (
