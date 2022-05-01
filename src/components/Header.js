@@ -83,7 +83,7 @@ export default function Header() {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                     <Navbar.Collapse id='responsive-navbar-nav'>
-                        <Nav className='mr-auto'>
+                        <Nav className='me-auto'>
                             <Nav.Link href='/'>Home</Nav.Link>
                             <Nav.Link href='/about'>About us</Nav.Link>
                             <Nav.Link href='/contacts'>Contacts</Nav.Link>
