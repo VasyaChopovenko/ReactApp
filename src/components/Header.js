@@ -16,6 +16,7 @@ import Blog from "../pages/Blog";
 import {Modal} from "react-bootstrap";
 import AboutTeam from "../pages/AboutTeam";
 import SinglePost from "../pages/SinglePost";
+import OutTeam from "../pages/OurTeam";
 
 export default function Header() {
     const [show, setShow] = useState(false);
@@ -92,6 +93,7 @@ export default function Header() {
                             <Nav.Link href='/about'>About us</Nav.Link>
                             <Nav.Link href='/contacts'>Contacts</Nav.Link>
                             <Nav.Link href='/blog'>Blog</Nav.Link>
+                            <Nav.Link href='/our-team'>Our Team</Nav.Link>
                         </Nav>
                         <Form className='d-flex'>
                             <FormControl type='text' placeholder='Search' className='mr-sm-2'/>
@@ -144,6 +146,7 @@ export default function Header() {
                     <Route path='/blog' element={<Blog/>}/>
                     <Route path='/teams/:teamId' element={<AboutTeam/>}/>
                     <Route path='/posts/:postId' element={<SinglePost/>}/>
+                    <Route path='/our-team' element={<OutTeam/>}/>
                 </Routes>
             </Router>
         </>
