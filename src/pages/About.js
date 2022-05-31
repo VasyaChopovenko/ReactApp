@@ -30,33 +30,63 @@ class About extends Component {
                         <Col sm={9}>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
-                                    <img className="d-block w-100" src="https://i.pinimg.com/originals/aa/f0/69/aaf069dc6de7618a63de784b70ad4370.jpg" alt="picture one"/>
-                                    <p>
-                                        Lorem
+                                    <img className="d-block w-50 float-start m-2"
+                                         src="https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                                         alt="picture one"/>
+                                    <p className="m-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet porta
+                                        mauris a congue. Curabitur consectetur felis est, et egestas sem convallis id.
+                                        Ut odio nisi, facilisis eu tortor non, rhoncus pharetra massa. Vestibulum eget
+                                        feugiat neque. Ut auctor finibus sagittis. Nunc sit amet sapien semper leo
+                                        sollicitudin dapibus eget venenatis diam.
                                     </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                    <img className="d-block w-100" src="https://jstemplate.net/wp-content/uploads/2021/05/digiency-cover.jpg" alt="picture two"/>
+                                    <img className="d-block w-75 m-auto mt-2"
+                                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                                         alt="picture two"/>
                                     <p>
-                                        Lorem
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet porta
+                                        mauris a congue. Curabitur consectetur felis est, et egestas sem convallis id.
+                                        Ut odio nisi, facilisis eu tortor non, rhoncus pharetra massa. Vestibulum eget
+                                        feugiat neque. Ut auctor finibus sagittis. Nunc sit amet sapien semper leo
+                                        sollicitudin dapibus eget venenatis diam.
                                     </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
-                                    <img className="d-block w-100" src="https://s3-alpha.figma.com/hub/file/858291939/14dda654-9bf1-47a5-ba66-904aa3003c6e-cover.png" alt="picture three"/>
-                                    <p>
-                                        Lorem
+                                    <p className="mt-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet porta
+                                        mauris a congue. Curabitur consectetur felis est, et egestas sem convallis id.
+                                        Ut odio nisi, facilisis eu tortor non, rhoncus pharetra massa. Vestibulum eget
+                                        feugiat neque. Ut auctor finibus sagittis. Nunc sit amet sapien semper leo
+                                        sollicitudin dapibus eget venenatis diam.
                                     </p>
+                                    <img className="d-block w-75 m-auto mt-2"
+                                         src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2dyYW18ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                                         alt="picture three"/>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
-                                    <img className="d-block w-100" src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg" alt="picture fourth"/>
+                                    <img className="d-block w-75 mt-2"
+                                         src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZnJhbWV3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                                         alt="picture fourth"/>
                                     <p>
-                                        Lorem
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet porta
+                                        mauris a congue. Curabitur consectetur felis est, et egestas sem convallis id.
+                                        Ut odio nisi, facilisis eu tortor non, rhoncus pharetra massa. Vestibulum eget
+                                        feugiat neque. Ut auctor finibus sagittis. Nunc sit amet sapien semper leo
+                                        sollicitudin dapibus eget venenatis diam.
                                     </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fifth">
-                                    <img className="d-block w-100" src="https://programminglibrarian.org/sites/default/files/partnerships_2.jpg" alt="picture fifth"/>
-                                    <p>
-                                        Lorem
+                                    <img className="d-block w-50 float-end mt-2"
+                                         src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                                         alt="picture fifth"/>
+                                    <p className="mt-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet porta
+                                        mauris a congue. Curabitur consectetur felis est, et egestas sem convallis id.
+                                        Ut odio nisi, facilisis eu tortor non, rhoncus pharetra massa. Vestibulum eget
+                                        feugiat neque. Ut auctor finibus sagittis. Nunc sit amet sapien semper leo
+                                        sollicitudin dapibus eget venenatis diam.
                                     </p>
                                 </Tab.Pane>
                             </Tab.Content>

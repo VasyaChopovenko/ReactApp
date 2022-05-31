@@ -14,6 +14,8 @@ import About from "../pages/About";
 import Contacts from "../pages/Contacts";
 import Blog from "../pages/Blog";
 import {Modal} from "react-bootstrap";
+import AboutTeam from "../pages/AboutTeam";
+import SinglePost from "../pages/SinglePost";
 
 export default function Header() {
     const [show, setShow] = useState(false);
@@ -58,6 +60,8 @@ export default function Header() {
             case 'password':
                 setPasswordDirty(true);
                 break;
+            default:
+                break;
         }
     };
 
@@ -89,7 +93,7 @@ export default function Header() {
                             <Nav.Link href='/contacts'>Contacts</Nav.Link>
                             <Nav.Link href='/blog'>Blog</Nav.Link>
                         </Nav>
-                        <Form inline className='d-flex'>
+                        <Form className='d-flex'>
                             <FormControl type='text' placeholder='Search' className='mr-sm-2'/>
                             <Button variant='outline-info'>Search</Button>
                             <Button className="ms-2" onClick={handleShow}>Login</Button>
@@ -138,6 +142,8 @@ export default function Header() {
                     <Route path='/about' element={<About/>}/>
                     <Route path='/contacts' element={<Contacts/>}/>
                     <Route path='/blog' element={<Blog/>}/>
+                    <Route path='/teams/:teamId' element={<AboutTeam/>}/>
+                    <Route path='/posts/:postId' element={<SinglePost/>}/>
                 </Routes>
             </Router>
         </>

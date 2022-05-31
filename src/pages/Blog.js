@@ -1,89 +1,49 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {Container, Col, Row, Card, ListGroup} from "react-bootstrap";
+import "./Blog.css"
+import TravelPosts from "./posts/TravelPosts";
+import HealthPosts from "./posts/HealthPosts";
+import LifeStylePosts from "./posts/LifeStylePosts";
+import ItPosts from "./posts/ItPosts";
 
-class Blog extends Component {
-    render() {
-        return (
-            <Container>
-                <Row>
-                    <Col md="9">
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                                    alt="photo"/>
-                            </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5>Blog post</h5>
-                                <p>
-                                    Lorem
-                                </p>
-                            </div>
-                        </div>
+export default function Blog() {
+    const postsByCategories = [TravelPosts, ItPosts, LifeStylePosts, HealthPosts];
 
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                                    alt="photo"/>
-                            </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5>Blog post</h5>
-                                <p>
-                                    Lorem
-                                </p>
-                            </div>
-                        </div>
+    const [categoryId, setCategoryId] = useState(0);
 
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                                    alt="photo"/>
-                            </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5>Blog post</h5>
-                                <p>
-                                    Lorem
-                                </p>
-                            </div>
-                        </div>
-                    </Col>
+    const onCategoryClicked = (categoryId) => {
+        setCategoryId(categoryId);
+    };
 
-                    <Col md="3">
-                        <h5 className="text-center mt-5">Категорії</h5>
+    return (
+        <Container>
+            <Row>
+                {postsByCategories[categoryId]}
+                <Col md="3">
+                    <h5 className="text-center mt-5">Категорії</h5>
 
-                        <Card>
-                            <ListGroup variant="flush">
-                                <ListGroup.Item>категорія 1</ListGroup.Item>
-                                <ListGroup.Item>категорія 2</ListGroup.Item>
-                                <ListGroup.Item>категорія 3</ListGroup.Item>
-                                <ListGroup.Item>категорія 4</ListGroup.Item>
-                                <ListGroup.Item>категорія 5</ListGroup.Item>
-                            </ListGroup>
-                        </Card>
-                    </Col>
-                    <Card className="mt-3 bg-light">
-                        <Card.Body>
-                            <Card.Title>Slide widget</Card.Title>
-                            <Card.Text>
-                                Lorem
-                            </Card.Text>
-                        </Card.Body>
+                    <Card>
+                        <ListGroup variant="flush">
+                            <ListGroup.Item active={categoryId === 0} action
+                                            onClick={() => onCategoryClicked(0)}>Travel</ListGroup.Item>
+                            <ListGroup.Item active={categoryId === 1} action
+                                            onClick={() => onCategoryClicked(1)}>It</ListGroup.Item>
+                            <ListGroup.Item active={categoryId === 2} action onClick={() => onCategoryClicked(2)}>Life
+                                style</ListGroup.Item>
+                            <ListGroup.Item active={categoryId === 3} action
+                                            onClick={() => onCategoryClicked(3)}>Health</ListGroup.Item>
+                        </ListGroup>
                     </Card>
-                </Row>
-            </Container>
-        );
-    }
+                </Col>
+                {/*<Card className="mt-3 bg-light">*/}
+                {/*    <Card.Body>*/}
+                {/*        <Card.Title>Slide widget</Card.Title>*/}
+                {/*        <Card.Text>*/}
+                {/*            Lorem*/}
+                {/*        </Card.Text>*/}
+                {/*    </Card.Body>*/}
+                {/*</Card>*/}
+            </Row>
+        </Container>
+    );
 }
-
-export default Blog;
