@@ -6,10 +6,7 @@ import MyButton from "../components/UI/button/MyButton";
 import MyInput from "../components/UI/input/MyInput";
 
 export default function Blog() {
-    const categories = [{name: 'Travel', id: 0}, {name: 'It', id: 1}, {name: 'Life Style', id: 2}, {
-        name: 'Health',
-        id: 3
-    }];
+    const categories = [{name: 'Travel', id: 0}, {name: 'It', id: 1}, {name: 'Life Style', id: 2}, {name: 'Health', id: 3}];
     const [categoryId, setCategoryId] = useState(0);
     const [posts, setPosts] = useState(
         [
@@ -18,7 +15,7 @@ export default function Blog() {
         ]
     );
 
-    const [post, setPost] = useState({title: '', body: '', categoryId: 0});
+    const [post, setPost] = useState({title: '', body: '', categoryId});
 
     const onCategoryClicked = (categoryId) => {
         setCategoryId(categoryId);
@@ -27,7 +24,7 @@ export default function Blog() {
     const addNewPost = (e) => {
         e.preventDefault();
         setPosts([...posts, {...post, id: Date.now()}]);
-        setPost({title: '', body: '', categoryId: 0});
+        setPost({title: '', body: '', categoryId: post.categoryId});
     };
 
     const categorySelectOptions = categories.map(category => (
