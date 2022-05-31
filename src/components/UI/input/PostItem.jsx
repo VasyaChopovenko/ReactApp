@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import classes from './posts.module.css';
 
 const PostItem = ({post}) => {
-
     return (
         <a className="d-flex align-items-center m-2 blog-post">
             <div className="flex-shrink-0">
@@ -10,7 +9,7 @@ const PostItem = ({post}) => {
                     width={150}
                     height={150}
                     className="mr-3 p-3"
-                    src="https://picsum.photos/id/55/300/300"
+                    src={`https://picsum.photos/seed/${post.id + 100}/300/300`}
                     alt="photo"/>
             </div>
             <div className="flex-grow-1">
