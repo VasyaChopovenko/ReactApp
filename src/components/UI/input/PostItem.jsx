@@ -1,23 +1,22 @@
 import React, {Component} from 'react';
 import classes from './posts.module.css';
+import MyButton from "../button/MyButton";
 
-const PostItem = ({post}) => {
+const PostItem = (props) => {
+
     return (
-        <a className="d-flex align-items-center m-2 blog-post">
-            <div className="flex-shrink-0">
-                <img
-                    width={150}
-                    height={150}
-                    className="mr-3 p-3"
-                    src={`https://picsum.photos/seed/${post.id + 100}/300/300`}
-                    alt="photo"/>
+        <div className={classes.post}>
+            <div className="post__content">
+                <strong>{props.number}. {props.post.title}</strong>
+                <div>
+                    {props.post.body}
+                </div>
             </div>
-            <div className="flex-grow-1">
-                <h5 className="m-2">{post.title}</h5>
-                <p className="m-2">{post.body}</p>
+            <div className="post__btns">
+                <MyButton onClick={() => props.remove(props.post)}>Видалити</MyButton>
             </div>
-        </a>
+        </div>
     );
-};
+}
 
 export default PostItem;
